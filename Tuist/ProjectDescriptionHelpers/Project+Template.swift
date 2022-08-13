@@ -16,7 +16,7 @@ public extension Project {
         let deploymentTarget = DeploymentTarget.iOS(targetVersion: "15.0", devices: [.iphone, .ipad])
         
         let settings: Settings = .settings(
-            base: ["OTHER_LDFLAGS": "$(inherited) -Xlinker -interposable"],
+            base: [:],
             configurations: [
                 .debug(name: .debug),
                 .release(name: .release)
@@ -34,7 +34,7 @@ public extension Project {
             entitlements: entitlements,
             scripts: [],
             dependencies: dependencies,
-            settings: settings
+            settings: .settings(base: ["OTHER_LDFLAGS": "$(inherited) -Xlinker -interposable -all_load"])
         )
         
         let schemes: [Scheme] = [.makeScheme(target: .debug, name: name)]
