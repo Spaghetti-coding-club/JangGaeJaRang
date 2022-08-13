@@ -18,7 +18,7 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum JangGaeJaRangAsset {
   public static let accentColor = JangGaeJaRangColors(name: "AccentColor")
-  public static let backGround = JangGaeJaRangColors(name: "backGround")
+  public static let background = JangGaeJaRangColors(name: "background")
   public static let defaultGreen = JangGaeJaRangColors(name: "defaultGreen")
   public static let disabledGreen = JangGaeJaRangColors(name: "disabledGreen")
   public static let gray1 = JangGaeJaRangColors(name: "gray1")
