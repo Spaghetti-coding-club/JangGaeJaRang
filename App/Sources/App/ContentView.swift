@@ -6,8 +6,7 @@ struct ContentView: View {
     @ObservedObject private var iO = Inject.observer
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SigninView()
             .enableInjection()
     }
 }

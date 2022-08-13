@@ -33,7 +33,8 @@ public extension Project {
             resources: resources,
             entitlements: entitlements,
             scripts: [],
-            dependencies: dependencies
+            dependencies: dependencies,
+            settings: settings
         )
         
         let schemes: [Scheme] = [.makeScheme(target: .debug, name: name)]
