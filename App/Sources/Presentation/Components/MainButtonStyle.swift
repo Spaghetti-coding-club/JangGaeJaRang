@@ -60,8 +60,11 @@ extension MainButtonStyle {
                     x: 0,
                     y: configuration.isPressed ? 0 : 4
                 )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray3, lineWidth: 1)
+                )
                 .cornerRadius(5)
-                .border(Color.gray3, width: 1)
         }
     }
 }
