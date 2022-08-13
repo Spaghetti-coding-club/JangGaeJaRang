@@ -2,7 +2,9 @@ import SwiftUI
 import Inject
 
 struct ContentView: View {
-    @StateObject var injectIO = Inject.observer
+    
+    @ObservedObject private var iO = Inject.observer
+    
     var body: some View {
         SigninView()
             .enableInjection()
