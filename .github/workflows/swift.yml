@@ -1,0 +1,19 @@
+name: Swift
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: |
+        rm -rf JangGaeJaRang.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+        xcodebuild clean build -project JangGaeJaRang.xcodeproj -scheme JangGaeJaRang -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=latest"
