@@ -63,13 +63,16 @@ struct SignupStep2View: View {
                     }
                     
                     MainButton(text: "다음", style: .enabled) {
-                        print("이전 버튼 탭")
+                        isNextStepPresented = true
                     }
                     .frame(width: UIScreen.screenWidth * 0.55)
                 }
             }
             .padding(30)
             .navigationBarHidden(true)
+            .background(NavigationLinkEmpty(isActive: $isNextStepPresented, {
+                SignupStep3View()
+            }))
         }
         .background(Color.background)
     }
