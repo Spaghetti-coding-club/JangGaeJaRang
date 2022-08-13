@@ -3,6 +3,8 @@ import SwiftUI
 struct SignupStep2View: View {
     @ObservedObject var viewModel = SignupStep2VM()
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack(alignment: .leading) {
             StepLabelComponent(1)
@@ -52,7 +54,7 @@ struct SignupStep2View: View {
             
             HStack(spacing: 10) {
                 MainButton(text: "이전", style: .canceled) {
-                    print("이전 버튼 탭")
+                    presentationMode.wrappedValue.dismiss()
                 }
                 
                 MainButton(text: "다음", style: .enabled) {
@@ -62,6 +64,7 @@ struct SignupStep2View: View {
             }
         }
         .padding(30)
+        .navigationBarHidden(true)
     }
 }
 
