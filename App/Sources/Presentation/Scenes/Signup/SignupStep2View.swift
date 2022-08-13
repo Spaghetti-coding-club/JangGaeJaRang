@@ -5,9 +5,11 @@ struct SignupStep2View: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    @State var isNextStepPresented = false
+    
     var body: some View {
         VStack(alignment: .leading) {
-            StepLabelComponent(1)
+            StepLabelComponent(2)
             
             Text("자세한 정보도 알려주세요 !")
                 .font(.system(size: 22, weight: .semibold))
@@ -58,13 +60,16 @@ struct SignupStep2View: View {
                 }
                 
                 MainButton(text: "다음", style: .enabled) {
-                    print("이전 버튼 탭")
+                    isNextStepPresented = true
                 }
                 .frame(width: UIScreen.screenWidth * 0.55)
             }
         }
         .padding(30)
         .navigationBarHidden(true)
+        .background(NavigationLinkEmpty(isActive: $isNextStepPresented, {
+            SignupStep3View()
+        }))
     }
 }
 

@@ -24,6 +24,7 @@ struct SignupStep1View: View {
                     .ignoresSafeArea()
                 VStack(alignment: .leading) {
                     StepLabelComponent(1)
+                    
                     VStack(spacing: 40) {
                         ZStack {
                             Image("profileImage")
