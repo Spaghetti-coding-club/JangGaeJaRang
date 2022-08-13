@@ -17,9 +17,9 @@
 		4639FCD628A76EAE0054EAD6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4639FCD528A76EAE0054EAD6 /* FirebaseStorage */; };
 		4639FCE328A781E30054EAD6 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE228A781E30054EAD6 /* SigninView.swift */; };
 		4639FCE528A781ED0054EAD6 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE428A781ED0054EAD6 /* Components.swift */; };
-		4639FCE728A781F30054EAD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE628A781F30054EAD6 /* Utils.swift */; };
 		4639FCEB28A782300054EAD6 /* SigninVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCEA28A782300054EAD6 /* SigninVM.swift */; };
 		4639FCEE28A783850054EAD6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCED28A783850054EAD6 /* AuthService.swift */; };
+		D54F6F4B28A7AD86009271DD /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6F4A28A7AD86009271DD /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,9 @@
 		4639FCC328A76C0E0054EAD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4639FCE228A781E30054EAD6 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		4639FCE428A781ED0054EAD6 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		4639FCE628A781F30054EAD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4639FCEA28A782300054EAD6 /* SigninVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVM.swift; sourceTree = "<group>"; };
 		4639FCED28A783850054EAD6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D54F6F4A28A7AD86009271DD /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		4639FCDC28A781820054EAD6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				4639FCE628A781F30054EAD6 /* Utils.swift */,
+				D54F6F4928A7AD86009271DD /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -152,6 +152,14 @@
 				4639FCDF28A781BD0054EAD6 /* Signin */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D54F6F4928A7AD86009271DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D54F6F4A28A7AD86009271DD /* ColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4639FCE728A781F30054EAD6 /* Utils.swift in Sources */,
 				4639FCEE28A783850054EAD6 /* AuthService.swift in Sources */,
 				4639FCBF28A76C0C0054EAD6 /* ContentView.swift in Sources */,
+				D54F6F4B28A7AD86009271DD /* ColorExtension.swift in Sources */,
 				4639FCEB28A782300054EAD6 /* SigninVM.swift in Sources */,
 				4639FCE528A781ED0054EAD6 /* Components.swift in Sources */,
 				4639FCBD28A76C0C0054EAD6 /* JangGaeJaRangApp.swift in Sources */,
