@@ -19,7 +19,7 @@
 ## 3. 팀원
 ### iOS 개발자
 * 이건우 <a href="https://github.com/2dubu" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:2dubu.dev@gmail.com)
-* 최졍현 <a href="https://github.com/yangpa043" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:yangpa043@gmail.com)
+* 최정현 <a href="https://github.com/yangpa043" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:yangpa043@gmail.com)
 * 최형우 <a href="https://github.com/baekteun" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:baegteun@gmail.com@gmail.com)
 
 ###  디자이너
