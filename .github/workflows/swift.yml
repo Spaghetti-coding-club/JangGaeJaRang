@@ -15,6 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: setup
       run: |
+        curl -Ls https://install.tuist.io | bash
         rm -rf .package.resolved
         make generate
       
