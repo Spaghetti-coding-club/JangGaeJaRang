@@ -1,14 +1,14 @@
 import SwiftUI
 
 extension Color {
-    static var background: Color { Color("background") }
-    static var defaultGreen: Color { Color("defaultGreen") }
-    static var disabledGreen: Color { Color("disabledGreen") }
-    static var gray1: Color { Color("gray1") }
-    static var gray2: Color { Color("gray2") }
-    static var gray3: Color { Color("gray3") }
-    static var gray4: Color { Color("gray4") }
-    static var gray5: Color { Color("gray5") }
-    static var gray6: Color { Color("gray6") }
-    static var gray7: Color { Color("gray7") }
+    static let background = Color("background")
+    static let defaultGreen = Color("defaultGreen")
+    static let disabledGreen = Color("disabledGreen")
+    static let gray1 = Color("gray1")
+    static let gray2 = Color("gray2")
+    static let gray3 = Color("gray3")
+    static let gray4 = Color("gray4")
+    static let gray5 = Color("gray5")
+    static let gray6 = Color("gray6")
+    static let gray7 = Color("gray7")
 }
