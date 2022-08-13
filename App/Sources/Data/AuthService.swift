@@ -4,6 +4,11 @@ import FirebaseFirestoreSwift
 
 struct AuthService {
     static let shared = AuthService()
+    
+    func checkIsLoggedIn() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
+    
     func signin(idToken: String, nonce: String) async throws -> Bool {
         let cred = OAuthProvider.credential(
             withProviderID: "apple.com",
