@@ -12,11 +12,11 @@ public extension Project {
         entitlements: Path? = nil,
         infoPlist: InfoPlist = .default
     ) -> Project {
-        let organizationName = "com.spaghetti"
+        let organizationName = "org.spaghetti"
         let deploymentTarget = DeploymentTarget.iOS(targetVersion: "15.0", devices: [.iphone, .ipad])
         
         let settings: Settings = .settings(
-            base: [:],
+            base: ["OTHER_LDFLAGS": "$(inherited) -Xlinker -interposable"],
             configurations: [
                 .debug(name: .debug),
                 .release(name: .release)

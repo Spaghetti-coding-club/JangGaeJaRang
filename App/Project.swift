@@ -5,13 +5,15 @@ let project = Project.makeModule(
     name: "JangGaeJaRang",
     product: .app,
     packages: [
-        .Firebase
+        .Firebase,
+        .Inject
     ],
     dependencies: [
         .SPM.FirebaseAuth,
         .SPM.FirebaseFirestore,
         .SPM.FirebaseFirestoreSwift,
-        .SPM.FirebaseStorage
+        .SPM.FirebaseStorage,
+        .SPM.Inject
     ],
     resources: ["Resources/**"],
     entitlements: Path("Support/JangGaeJaRang.entitlements"),
