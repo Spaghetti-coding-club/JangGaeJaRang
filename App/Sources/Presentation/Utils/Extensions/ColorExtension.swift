@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension Color {
-    static let background = Color("background")
+    static let background = Color("backGround")
     static let defaultGreen = Color("defaultGreen")
     static let disabledGreen = Color("disabledGreen")
     static let gray1 = Color("gray1")

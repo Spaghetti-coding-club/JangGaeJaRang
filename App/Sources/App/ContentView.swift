@@ -1,9 +1,11 @@
 import SwiftUI
+import Inject
 
 struct ContentView: View {
+    @StateObject var injectIO = Inject.observer
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SigninView()
+            .enableInjection()
     }
 }
 
