@@ -21,7 +21,7 @@
 		4639FCE328A781E30054EAD6 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE228A781E30054EAD6 /* SigninView.swift */; };
 		4639FCE528A781ED0054EAD6 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE428A781ED0054EAD6 /* Components.swift */; };
 		4639FCE728A781F30054EAD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE628A781F30054EAD6 /* Utils.swift */; };
-		4639FCEB28A782300054EAD6 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCEA28A782300054EAD6 /* SigninViewModel.swift */; };
+		4639FCEB28A782300054EAD6 /* SigninVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCEA28A782300054EAD6 /* SigninVM.swift */; };
 		4639FCEE28A783850054EAD6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCED28A783850054EAD6 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		4639FCE228A781E30054EAD6 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		4639FCE428A781ED0054EAD6 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		4639FCE628A781F30054EAD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		4639FCEA28A782300054EAD6 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		4639FCEA28A782300054EAD6 /* SigninVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVM.swift; sourceTree = "<group>"; };
 		4639FCED28A783850054EAD6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 		4639FCDB28A7817D0054EAD6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				4639FCDF28A781BD0054EAD6 /* Signin */,
+				46DE811328A78E0D008A4B55 /* Scenes */,
 				4639FCDE28A781990054EAD6 /* Components */,
 				4639FCDC28A781820054EAD6 /* Utils */,
 			);
@@ -129,26 +129,10 @@
 		4639FCDF28A781BD0054EAD6 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
-				4639FCE128A781C20054EAD6 /* ViewModel */,
-				4639FCE028A781BF0054EAD6 /* View */,
+				4639FCE228A781E30054EAD6 /* SigninView.swift */,
+				4639FCEA28A782300054EAD6 /* SigninVM.swift */,
 			);
 			path = Signin;
-			sourceTree = "<group>";
-		};
-		4639FCE028A781BF0054EAD6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4639FCE228A781E30054EAD6 /* SigninView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4639FCE128A781C20054EAD6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4639FCEA28A782300054EAD6 /* SigninViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4639FCEF28A784040054EAD6 /* Resources */ = {
@@ -168,6 +152,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		46DE811328A78E0D008A4B55 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCDF28A781BD0054EAD6 /* Signin */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +167,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4639FCC728A76C0E0054EAD6 /* Build configuration list for PBXNativeTarget "JangGaeJaRang" */;
 			buildPhases = (
+				46DE811228A784D7008A4B55 /* SwiftLint Run Script */,
 				4639FCB528A76C0C0054EAD6 /* Sources */,
 				4639FCB628A76C0C0054EAD6 /* Frameworks */,
 				4639FCB728A76C0C0054EAD6 /* Resources */,
@@ -245,6 +238,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46DE811228A784D7008A4B55 /* SwiftLint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4639FCB528A76C0C0054EAD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -253,7 +267,7 @@
 				4639FCE728A781F30054EAD6 /* Utils.swift in Sources */,
 				4639FCEE28A783850054EAD6 /* AuthService.swift in Sources */,
 				4639FCBF28A76C0C0054EAD6 /* ContentView.swift in Sources */,
-				4639FCEB28A782300054EAD6 /* SigninViewModel.swift in Sources */,
+				4639FCEB28A782300054EAD6 /* SigninVM.swift in Sources */,
 				4639FCE528A781ED0054EAD6 /* Components.swift in Sources */,
 				4639FCBD28A76C0C0054EAD6 /* JangGaeJaRangApp.swift in Sources */,
 				4639FCE328A781E30054EAD6 /* SigninView.swift in Sources */,
