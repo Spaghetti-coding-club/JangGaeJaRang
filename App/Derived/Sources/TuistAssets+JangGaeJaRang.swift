@@ -29,6 +29,7 @@ public enum JangGaeJaRangAsset {
   public static let gray6 = JangGaeJaRangColors(name: "gray6")
   public static let gray7 = JangGaeJaRangColors(name: "gray7")
   public static let jangGaeJaRangLogo = JangGaeJaRangImages(name: "JangGaeJaRangLogo")
+  public static let phy = JangGaeJaRangImages(name: "Phy")
   public static let pets = JangGaeJaRangImages(name: "pets")
   public static let profileImage = JangGaeJaRangImages(name: "profileImage")
 }
