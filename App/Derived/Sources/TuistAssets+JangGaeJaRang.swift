@@ -28,6 +28,7 @@ public enum JangGaeJaRangAsset {
   public static let gray5 = JangGaeJaRangColors(name: "gray5")
   public static let gray6 = JangGaeJaRangColors(name: "gray6")
   public static let gray7 = JangGaeJaRangColors(name: "gray7")
+  public static let jangGaeJaRangLogo = JangGaeJaRangImages(name: "JangGaeJaRangLogo")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
@@ -63,6 +64,46 @@ public extension JangGaeJaRangColors.Color {
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
     self.init(named: NSColor.Name(asset.name), bundle: bundle)
+    #elseif os(watchOS)
+    self.init(named: asset.name)
+    #endif
+  }
+}
+
+public struct JangGaeJaRangImages {
+  public fileprivate(set) var name: String
+
+  #if os(macOS)
+  public typealias Image = NSImage
+  #elseif os(iOS) || os(tvOS) || os(watchOS)
+  public typealias Image = UIImage
+  #endif
+
+  public var image: Image {
+    let bundle = JangGaeJaRangResources.bundle
+    #if os(iOS) || os(tvOS)
+    let image = Image(named: name, in: bundle, compatibleWith: nil)
+    #elseif os(macOS)
+    let image = bundle.image(forResource: NSImage.Name(name))
+    #elseif os(watchOS)
+    let image = Image(named: name)
+    #endif
+    guard let result = image else {
+      fatalError("Unable to load image asset named \(name).")
+    }
+    return result
+  }
+}
+
+public extension JangGaeJaRangImages.Image {
+  @available(macOS, deprecated,
+    message: "This initializer is unsafe on macOS, please use the JangGaeJaRangImages.image property")
+  convenience init?(asset: JangGaeJaRangImages) {
+    #if os(iOS) || os(tvOS)
+    let bundle = JangGaeJaRangResources.bundle
+    self.init(named: asset.name, in: bundle, compatibleWith: nil)
+    #elseif os(macOS)
+    self.init(named: NSImage.Name(asset.name))
     #elseif os(watchOS)
     self.init(named: asset.name)
     #endif

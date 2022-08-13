@@ -14,5 +14,6 @@ let project = Project.makeModule(
         .SPM.FirebaseStorage
     ],
     resources: ["Resources/**"],
-    entitlements: Path("Support/JangGaeJaRang.entitlements")
+    entitlements: Path("Support/JangGaeJaRang.entitlements"),
+    infoPlist: .file(path: "Support/Info.plist")
 )
