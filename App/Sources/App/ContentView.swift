@@ -17,7 +17,7 @@ struct ContentView: View {
             Text("Signup")
             
         case .main:
-            Text("Main")
+            MainTabView()
             
         @unknown default:
             Text("Error")
