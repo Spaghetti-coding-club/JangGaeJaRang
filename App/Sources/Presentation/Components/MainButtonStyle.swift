@@ -2,7 +2,7 @@ import SwiftUI
 
 extension MainButton {
     enum Style {
-        case disabled, enabled
+        case disabled, enabled, canceled
     }
 }
 
@@ -15,9 +15,10 @@ struct MainButtonStyle: ButtonStyle {
             return AnyView(DisabledButton(configuration: configuration))
         case .enabled:
             return AnyView(EnabledButton(configuration: configuration))
+        case .canceled:
+            return AnyView(CanceledButton(configuration: configuration))
         }
     }
-
 }
 
 extension MainButtonStyle {
@@ -44,6 +45,23 @@ extension MainButtonStyle {
                     y: configuration.isPressed ? 0 : 4
                 )
                 .cornerRadius(5)
+        }
+    }
+    
+    struct CanceledButton: View {
+        let configuration: ButtonStyle.Configuration
+        var body: some View {
+            configuration.label
+                .font(Font.system(size: 15, weight: .semibold))
+                .background(.white)
+                .shadow(
+                    color: .black.opacity(configuration.isPressed ? 0 : 0.06),
+                    radius: configuration.isPressed ? 0 : 4,
+                    x: 0,
+                    y: configuration.isPressed ? 0 : 4
+                )
+                .cornerRadius(5)
+                .border(Color.gray3, width: 1)
         }
     }
 }
