@@ -29,6 +29,7 @@ public enum JangGaeJaRangAsset {
   public static let gray6 = JangGaeJaRangColors(name: "gray6")
   public static let gray7 = JangGaeJaRangColors(name: "gray7")
   public static let jangGaeJaRangLogo = JangGaeJaRangImages(name: "JangGaeJaRangLogo")
+  public static let pets = JangGaeJaRangImages(name: "pets")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

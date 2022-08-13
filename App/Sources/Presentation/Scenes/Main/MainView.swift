@@ -4,8 +4,8 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottomTrailing) {
-                Button {
-                    
+                NavigationLink {
+                    CreateFeedView()
                 } label: {
                     Image(systemName: "pencil")
                         .resizable()
