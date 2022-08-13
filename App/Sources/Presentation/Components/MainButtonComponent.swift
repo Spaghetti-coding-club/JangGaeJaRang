@@ -33,6 +33,7 @@ struct CTAButton_Previews: PreviewProvider {
         VStack(spacing: 30) {
             MainButton(text: "disabled", style: .disabled) {}
             MainButton(text: "enabled", style: .enabled) {}
+            MainButton(text: "canceled", style: .canceled) {}
         }
         .padding(.horizontal)
     }
