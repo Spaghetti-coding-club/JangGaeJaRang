@@ -18,6 +18,11 @@
 		4639FCD428A76EAE0054EAD6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4639FCD328A76EAE0054EAD6 /* FirebaseFirestoreSwift */; };
 		4639FCD628A76EAE0054EAD6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4639FCD528A76EAE0054EAD6 /* FirebaseStorage */; };
 		4639FCD828A76EAE0054EAD6 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4639FCD728A76EAE0054EAD6 /* FirebaseStorageCombine-Community */; };
+		4639FCE328A781E30054EAD6 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE228A781E30054EAD6 /* SigninView.swift */; };
+		4639FCE528A781ED0054EAD6 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE428A781ED0054EAD6 /* Components.swift */; };
+		4639FCE728A781F30054EAD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCE628A781F30054EAD6 /* Utils.swift */; };
+		4639FCEB28A782300054EAD6 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCEA28A782300054EAD6 /* SigninViewModel.swift */; };
+		4639FCEE28A783850054EAD6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4639FCED28A783850054EAD6 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		4639FCBE28A76C0C0054EAD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4639FCC028A76C0E0054EAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4639FCC328A76C0E0054EAD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4639FCE228A781E30054EAD6 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		4639FCE428A781ED0054EAD6 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		4639FCE628A781F30054EAD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4639FCEA28A782300054EAD6 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		4639FCED28A783850054EAD6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +75,10 @@
 		4639FCBB28A76C0C0054EAD6 /* JangGaeJaRang */ = {
 			isa = PBXGroup;
 			children = (
-				4639FCBC28A76C0C0054EAD6 /* JangGaeJaRangApp.swift */,
-				4639FCBE28A76C0C0054EAD6 /* ContentView.swift */,
-				4639FCC028A76C0E0054EAD6 /* Assets.xcassets */,
+				4639FCF028A7840B0054EAD6 /* App */,
+				4639FCEF28A784040054EAD6 /* Resources */,
+				4639FCDB28A7817D0054EAD6 /* Presentation */,
+				4639FCDA28A7817A0054EAD6 /* Data */,
 				4639FCC228A76C0E0054EAD6 /* Preview Content */,
 			);
 			path = JangGaeJaRang;
@@ -79,6 +90,82 @@
 				4639FCC328A76C0E0054EAD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4639FCDA28A7817A0054EAD6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCED28A783850054EAD6 /* AuthService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4639FCDB28A7817D0054EAD6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCDF28A781BD0054EAD6 /* Signin */,
+				4639FCDE28A781990054EAD6 /* Components */,
+				4639FCDC28A781820054EAD6 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4639FCDC28A781820054EAD6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCE628A781F30054EAD6 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4639FCDE28A781990054EAD6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCE428A781ED0054EAD6 /* Components.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4639FCDF28A781BD0054EAD6 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCE128A781C20054EAD6 /* ViewModel */,
+				4639FCE028A781BF0054EAD6 /* View */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		4639FCE028A781BF0054EAD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCE228A781E30054EAD6 /* SigninView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4639FCE128A781C20054EAD6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCEA28A782300054EAD6 /* SigninViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4639FCEF28A784040054EAD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCC028A76C0E0054EAD6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4639FCF028A7840B0054EAD6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4639FCBE28A76C0C0054EAD6 /* ContentView.swift */,
+				4639FCBC28A76C0C0054EAD6 /* JangGaeJaRangApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4639FCE728A781F30054EAD6 /* Utils.swift in Sources */,
+				4639FCEE28A783850054EAD6 /* AuthService.swift in Sources */,
 				4639FCBF28A76C0C0054EAD6 /* ContentView.swift in Sources */,
+				4639FCEB28A782300054EAD6 /* SigninViewModel.swift in Sources */,
+				4639FCE528A781ED0054EAD6 /* Components.swift in Sources */,
 				4639FCBD28A76C0C0054EAD6 /* JangGaeJaRangApp.swift in Sources */,
+				4639FCE328A781E30054EAD6 /* SigninView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
