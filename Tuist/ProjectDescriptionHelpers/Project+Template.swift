@@ -34,7 +34,7 @@ public extension Project {
             entitlements: entitlements,
             scripts: [],
             dependencies: dependencies,
-            settings: .settings(base: ["OTHER_LDFLAGS": "$(inherited) -Xlinker -interposable -all_load"])
+            settings: .settings(base: ["OTHER_LDFLAGS": "$(inherited) -Xlinker -interposable"])
         )
         
         let schemes: [Scheme] = [.makeScheme(target: .debug, name: name)]
