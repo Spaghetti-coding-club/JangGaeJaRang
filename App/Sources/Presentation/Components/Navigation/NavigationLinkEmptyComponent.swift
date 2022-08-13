@@ -1,10 +1,3 @@
-//
-//  NavigationLinkEmptyComponent.swift
-//  JangGaeJaRang
-//
-//  Created by 짜미 on 2022/08/14.
-//  Copyright © 2022 org.spaghetti. All rights reserved.
-//
 
 import SwiftUI
 

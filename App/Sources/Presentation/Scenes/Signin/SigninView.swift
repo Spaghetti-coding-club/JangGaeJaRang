@@ -1,9 +1,12 @@
 import SwiftUI
+import Inject
 import AuthenticationServices
 
 struct SigninView: View {
     @EnvironmentObject var sceneStateViewModel: SceneStateViewModel
     @StateObject var viewModel = SigninVM()
+    @ObservedObject private var iO = Inject.observer
+    
     var body: some View {
         ZStack {
             Color.background
