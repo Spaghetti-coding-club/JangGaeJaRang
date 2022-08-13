@@ -2,6 +2,8 @@ import SwiftUI
 import AuthenticationServices
 
 struct SigninView: View {
+    @EnvironmentObject var sceneStateViewModel: SceneStateViewModel
+    @StateObject var viewModel = SigninVM()
     var body: some View {
         ZStack {
             Color.background
@@ -23,15 +25,30 @@ struct SigninView: View {
                 Spacer()
                 
                 SignInWithAppleButton { request in
-                    
+                    request.requestedScopes = [.fullName, .email]
+                    let nonce = FirebaseAppleUtils.randomNonceString()
+                    request.nonce = FirebaseAppleUtils.sha256(nonce)
+                    viewModel.nonce = nonce
                 } onCompletion: { res in
-                    
+                    switch res {
+                    case let .success(auth):
+                        guard let cred = auth.credential as? ASAuthorizationAppleIDCredential else {
+                            return
+                        }
+                        viewModel.send(.appleSigninCompleted(cred: cred.identityToken ?? .init()))
+                        
+                    case .failure:
+                        viewModel.isErrorOcuured = true
+                    }
                 }
                 .signInWithAppleButtonStyle(.white)
                 .frame(height: 57)
                 .padding(.horizontal, 41)
                 .padding(.bottom, 80)
             }
+        }
+        .onReceive(viewModel.$sceneState) { _ in
+            sceneStateViewModel.sceneState = viewModel.sceneState
         }
     }
 }
