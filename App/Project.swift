@@ -13,5 +13,6 @@ let project = Project.makeModule(
         .SPM.FirebaseFirestoreSwift,
         .SPM.FirebaseStorage
     ],
-    resources: ["Resources/**"]
+    resources: ["Resources/**"],
+    entitlements: Path("Support/JangGaeJaRang.entitlements")
 )

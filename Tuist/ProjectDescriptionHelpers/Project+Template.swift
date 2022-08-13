@@ -9,6 +9,7 @@ public extension Project {
         dependencies: [TargetDependency] = [],
         sources: SourceFilesList = ["Sources/**"],
         resources: ResourceFileElements? = nil,
+        entitlements: Path? = nil,
         infoPlist: InfoPlist = .default
     ) -> Project {
         let organizationName = "com.spaghetti"
@@ -30,6 +31,7 @@ public extension Project {
             infoPlist: infoPlist,
             sources: sources,
             resources: resources,
+            entitlements: entitlements,
             scripts: [],
             dependencies: dependencies
         )
