@@ -35,7 +35,7 @@ extension View {
     modifier(ViewDidLoadModifier(perform: action))
   }
   
-  func textStyle(_ size: CGFloat, _ weight: Font.Weight, _ color: Color = .compBlue) -> some View {
+  func textStyle(_ size: CGFloat, _ weight: Font.Weight, _ color: Color = .gray7) -> some View {
     modifier(TextStyleModifier(color: color, size: size, weight: weight))
   }
 }
