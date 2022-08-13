@@ -1,1 +1,5 @@
-import Foundation
+
+
+final class SigninVM: BaseViewModel {
+    
+}
