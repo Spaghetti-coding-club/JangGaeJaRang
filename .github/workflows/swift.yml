@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: xcodebuild clean test -project JangGaeJaRang.xcodeproj -scheme JangGaeJaRang -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
+      run: xcodebuild build -project JangGaeJaRang.xcodeproj -scheme JangGaeJaRang -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
