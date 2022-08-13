@@ -3,6 +3,7 @@ import SwiftUI
 struct CreateFeedView: View {
     @StateObject var viewModel = CreateFeedViewModel()
     @State var isActiveImagePicker = false
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
             Color.background
@@ -56,7 +57,7 @@ struct CreateFeedView: View {
                             text: "올리기",
                             style: !viewModel.content.isEmpty && !viewModel.images.isEmpty ? .enabled : .disabled
                         ) {
-                            
+                            viewModel.send(.completeButtonDidTap)
                         }
                         .padding(.horizontal, 30)
                         .padding(.bottom, 50)
@@ -69,6 +70,11 @@ struct CreateFeedView: View {
         }
         .sheet(isPresented: $isActiveImagePicker) {
             ImagePicker(image: $viewModel.selectedImage)
+        }
+        .onReceive(viewModel.$dismissIsRequired) { _ in
+            if viewModel.dismissIsRequired {
+                presentationMode.wrappedValue.dismiss()
+            }
         }
     }
 }

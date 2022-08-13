@@ -11,15 +11,13 @@ struct MainTabView: View {
                 }
                 .tag(0)
             
-            Text("Profile")
+            ProfileView()
                 .tabItem {
-                    Image(systemName: "person.fill")
-                        .frame(width: 28, height: 28)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.gray6, lineWidth: selection == 1 ? 1.5 : 0))
+                    Image(selection == 1 ? "profileBorder" : "profileSmall")
                 }
                 .tag(1)
         }
+        .accentColor(.gray7)
     }
 }
 

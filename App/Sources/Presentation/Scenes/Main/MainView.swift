@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewModel()
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottomTrailing) {
@@ -21,8 +22,8 @@ struct MainView: View {
                 GeometryReader { proxy in
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVStack {
-                            ForEach(0...10, id: \.self) { _ in
-                                MainFeedRow(size: proxy.size)
+                            ForEach(viewModel.feedList, id: \.uid) { feed in
+                                MainFeedRow(size: proxy.size, feed: feed)
                                     .padding(.bottom, 40)
                             }
                         }
@@ -32,24 +33,43 @@ struct MainView: View {
                 }
                 .zIndex(0)
             }
+            .onAppear {
+                viewModel.send(.onAppear)
+            }
         }
         .navigationViewStyle(.stack)
     }
     
     @ViewBuilder
-    func MainFeedRow(size: CGSize) -> some View {
+    func MainFeedRow(size: CGSize, feed: Feed) -> some View {
         VStack {
             HStack(spacing: 14) {
-                Image(systemName: "person.fill")
-                    .frame(width: 36, height: 36)
-                    .clipShape(Circle())
-                Text("멍멍이")
+                AsyncImage(url: URL(string: feed.author.profileImageUrl)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .frame(width: 36, height: 36)
+                            .aspectRatio(contentMode: .fit)
+                            .clipped()
+                            .clipShape(Circle())
+                    } else if phase.error != nil {
+                        VStack {
+                            Image(systemName: "exclamationmark.square")
+                            Text("이미지를 불러올 수 없습니다")
+                        }
+                        .foregroundColor(.gray4)
+                    } else {
+                        ProgressView()
+                    }
+                }
+                .clipped()
+                Text(feed.author.dogName)
                     .font(.system(size: 16, weight: .semibold))
                 Spacer()
             }
             .padding(.horizontal, 18)
             
-            ImageListView(images: ["https://avatars.githubusercontent.com/u/74440939?v=4", "https://avatars.githubusercontent.com/u/95753750?s=64&v=4"])
+            ImageListView(images: feed.imageUrls)
                 .frame(width: size.width, height: size.width)
                 .padding(.top, 12)
             
@@ -58,7 +78,7 @@ struct MainView: View {
                     print("Like")
                 } label: {
                     Label {
-                        Text("21")
+                        Text("\(feed.likeCount)")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(.gray4)
                     } icon: {
@@ -74,7 +94,7 @@ struct MainView: View {
             .padding(.horizontal, 16)
             .padding(.top, 18)
             
-            Text("우리집 갱얼쥐 좀 보세요 우리집 앵얼쥐좀 보세요 우리집 좀 보고가세요")
+            Text(feed.content)
                 .lineLimit(nil)
                 .multilineTextAlignment(.leading)
                 .font(.system(size: 16, weight: .medium))
