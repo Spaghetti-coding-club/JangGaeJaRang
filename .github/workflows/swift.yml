@@ -16,4 +16,4 @@ jobs:
     - name: Build
       run: |
         rm -rf JangGaeJaRang.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
-        xcodebuild clean build -project JangGaeJaRang.xcodeproj -scheme JangGaeJaRang -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=latest"
+        xcodebuild build -project JangGaeJaRang.xcodeproj -scheme JangGaeJaRang -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=latest"
