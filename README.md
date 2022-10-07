@@ -52,7 +52,7 @@
 * 장정원 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:gardenjang24@gmail.com)
 
 ### 기획자
-* 김동윤 <a href="https://github.com/drew373" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:373drew@gmail.com)
+* 김동윤 <a href="https://github.com/dongyoon1126" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:373drew@gmail.com)
 
 
 
@@ -70,6 +70,3 @@
 * <a href="" target="_blank">Combine</a>
 * <a href="" target="_blank">InjectionIII</a>
 * <a href="" target="_blank">Singleton Pattern</a>
-
-## 5. 앱스토어 링크
-열심히 개발하고 있습니다! 앱스토어에 출시되면 바로 링크 첨부할테니, 기다려주세요!
