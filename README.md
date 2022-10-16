@@ -52,7 +52,7 @@
 * 장정원 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:gardenjang24@gmail.com)
 
 ### 기획자
-* 김동윤 <a href="https://github.com/dongyoon1126" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:373drew@gmail.com)
+* 김동윤 <a href="https://github.com/drew105" target="_blank"><img src="https://img.shields.io/badge/Github-181717?style=round-square&logo=Github&logoColor=white"/></a> [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:dongyoon.dev@gmail.com)
 
 
 
